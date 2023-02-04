@@ -56,7 +56,7 @@ namespace proiectDaw.Controllers
         }
 
         [HttpDelete("delete/{id}")]
-        public IActionResult DeleteApartment(Guid id)
+        public IActionResult DeleteReview(Guid id)
         {
             var deleteReview = _reviewService.GetById(id);
             if (deleteReview == null)

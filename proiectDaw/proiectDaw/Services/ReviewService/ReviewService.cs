@@ -37,8 +37,6 @@ namespace proiectDaw.Services.ReviewService
             _reviewRepository.Delete(deleteReview);
         }
 
-        
-
         public bool Save()
         {
             return _reviewRepository.Save();
