@@ -9,6 +9,7 @@ namespace proiectDaw.Data
         public DbSet<Subscription> Subscriptions { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<UserBookRelation> UserBookRelations { get; set; }
 
 
         public Context(DbContextOptions<Context> options) : base(options)
