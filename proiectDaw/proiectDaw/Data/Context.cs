@@ -7,7 +7,7 @@ namespace proiectDaw.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
-        public DbSet<Author> Authors { get; set; }
+        public DbSet<Review> Reviews { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<UserBookRelation> UserBookRelations { get; set; }
 
@@ -26,10 +26,9 @@ namespace proiectDaw.Data
                 .WithOne(s => s.User)
                 .HasForeignKey<Subscription>(s => s.UserId);
 
-            // One to many Author - Books
-            builder.Entity<Author>()
-                .HasMany(a => a.Books)
-                .WithOne(b => b.Author);
+            // One to many Book - Reviews
+            builder.Entity<Book>()
+                .HasMany(b => b.Reviews);
 
             //Many to many User - Book
 
