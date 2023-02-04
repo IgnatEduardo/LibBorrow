@@ -10,7 +10,7 @@ namespace proiectDaw.Models.DTOs
         [Required]
         public Guid BookID { get; set; }
         public string Message { get; set; }
-        public string Rating { get; set; }
+        public int Rating { get; set; }
 
     }
 }

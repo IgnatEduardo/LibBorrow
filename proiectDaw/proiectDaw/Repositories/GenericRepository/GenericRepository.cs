@@ -10,7 +10,7 @@ namespace proiectDaw.Repositories.GenericRepository
         protected readonly Context _context;
         protected readonly DbSet<TEntity> _table;
 
-        public GenericRepository(Context context, DbSet<TEntity> table) //dependency injection
+        public GenericRepository(Context context) //dependency injection
         {
             _context = context;
             _table = _context.Set<TEntity>();
