@@ -1,4 +1,5 @@
-﻿using proiectDaw.Models;
+﻿using proiectDaw.Data.UitOfWork;
+using proiectDaw.Models;
 using proiectDaw.Repositories.ReviewRepository;
 
 namespace proiectDaw.Services.ReviewService
@@ -6,6 +7,7 @@ namespace proiectDaw.Services.ReviewService
     public class ReviewService : IReviewService
     {
         public IReviewRepository _reviewRepository;
+        public IUnitOfWork _unitOfWork;
 
         public ReviewService(IReviewRepository reviewRepository)
         {
@@ -27,20 +29,22 @@ namespace proiectDaw.Services.ReviewService
             await _reviewRepository.SaveAsync();
         }
 
-        public void Update(Review updatedReview)
+        public async Task Update(Review updatedReview)
         {
             _reviewRepository.Update(updatedReview);
+            await _unitOfWork.SaveAsync();
         }
 
-        public void Delete(Review deleteReview)
+        public async Task Delete(Review deleteReview)
         {
             _reviewRepository.Delete(deleteReview);
+            await _unitOfWork.SaveAsync();
         }
 
         public bool Save()
         {
             return _reviewRepository.Save();
-        }
+    }
 
         
     }

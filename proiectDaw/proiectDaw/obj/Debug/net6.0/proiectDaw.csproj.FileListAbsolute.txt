@@ -80,3 +80,6 @@ D:\FMI\An3\DAW\proiectDAW\proiectDaw\proiectDaw\obj\Debug\net6.0\refint\proiectD
 D:\FMI\An3\DAW\proiectDAW\proiectDaw\proiectDaw\obj\Debug\net6.0\proiectDaw.pdb
 D:\FMI\An3\DAW\proiectDAW\proiectDaw\proiectDaw\obj\Debug\net6.0\proiectDaw.genruntimeconfig.cache
 D:\FMI\An3\DAW\proiectDAW\proiectDaw\proiectDaw\obj\Debug\net6.0\ref\proiectDaw.dll
+D:\FMI\An3\DAW\proiectDAW\proiectDaw\proiectDaw\bin\Debug\net6.0\AutoMapper.dll
+D:\FMI\An3\DAW\proiectDAW\proiectDaw\proiectDaw\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\FMI\An3\DAW\proiectDAW\proiectDaw\proiectDaw\bin\Debug\net6.0\BCrypt.Net-Core.dll

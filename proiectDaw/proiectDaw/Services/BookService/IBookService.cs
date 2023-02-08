@@ -7,8 +7,8 @@ namespace proiectDaw.Services.BookService
         Book GetById(Guid id);
         Task<List<Book>> GetAllBooks();
         Task Create(Book newBook);
-        void Delete(Book deleteBook);
-        void Update(Book updateBook);
+        Task Delete(Book deleteBook);
+        Task Update(Book updateBook);
         bool Save();
     }
 }

@@ -1,4 +1,5 @@
-﻿using proiectDaw.Models;
+﻿using proiectDaw.Data.UitOfWork;
+using proiectDaw.Models;
 using proiectDaw.Repositories.BookRepository;
 
 namespace proiectDaw.Services.BookService
@@ -6,6 +7,8 @@ namespace proiectDaw.Services.BookService
     public class BookService : IBookService
     {
         public IBookRepository _bookRepository;
+
+        public IUnitOfWork _unitOfWork;
 
         public BookService(IBookRepository bookRepository)
         {
@@ -18,9 +21,10 @@ namespace proiectDaw.Services.BookService
             await _bookRepository.SaveAsync();
         }
 
-        public void Delete(Book deleteBook)
+        public async Task Delete(Book deleteBook)
         {
             _bookRepository.Delete(deleteBook);
+            await _unitOfWork.SaveAsync();
         }
 
         public async Task<List<Book>> GetAllBooks()
@@ -38,9 +42,10 @@ namespace proiectDaw.Services.BookService
             return _bookRepository.Save();
         }
 
-        public void Update(Book updateBook)
+        public async Task Update(Book updateBook)
         {
             _bookRepository.Update(updateBook);
+            await _unitOfWork.SaveAsync();
         }
     }
 }

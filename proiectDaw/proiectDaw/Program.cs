@@ -17,6 +17,8 @@ builder.Services.AddSwaggerGen();
 //services
 builder.Services.AddRepositories();
 builder.Services.AddServices();
+builder.Services.AddJwtUtils();
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
 var app = builder.Build();
 

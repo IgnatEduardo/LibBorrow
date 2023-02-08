@@ -1,6 +1,8 @@
-﻿namespace proiectDaw.Models
+﻿using proiectDaw.Models.Base;
+
+namespace proiectDaw.Models
 {
-    public class UserBookRelation
+    public class UserBookRelation : BaseEntity
     {
         public Guid UserId { get; set; }
         public User User { get; set; }

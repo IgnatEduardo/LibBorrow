@@ -7,8 +7,8 @@ namespace proiectDaw.Services.ReviewService
         Review GetById(Guid id);
         Task<List<Review>> GetAllReviews();
         Task Create(Review newReview);
-        void Update(Review updateReview);
-        void Delete(Review deleteReview);
+        Task Update(Review updateReview);
+        Task Delete(Review deleteReview);
         bool Save();
     }
 }
