@@ -1,4 +1,4 @@
-# proiectDAW
+# LibBorrow
 
 Cerinte indeplinite: 
 - 3 Controllere (minim); Fiecare Metoda Crud, REST cu date din baza de date. (1p)
